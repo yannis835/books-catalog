@@ -12,4 +12,5 @@ jobs:
     steps:
     - name: Checkout sources
       uses: actions/checkout@v2
-
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag docker.io/<yannismtn>/books-catalog:3.0
